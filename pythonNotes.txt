@@ -1,0 +1,75 @@
+"""
+What's the central difference between a parameter and an argument?
+A parameter is the variable used for input values in a function, while an argument is the specific input value passed to the function.
+"""
+def make_pizza(ingredients):
+    pizza = 'a {} pizza'.format(ingredients)
+    print (pizza)
+
+make_pizza('buffalo')
+
+def make_pizza(*ingredients):
+    pizza = 'a {} ingredients pizza'.format(len(ingredients))
+    print (pizza)
+
+make_pizza('buffalo')
+
+
+those parameters are used internally to set the starting state of the jeans. This _init_ method has three inputs that describe a pair of jeans, waist, length, and color, and also this strange first parameter called self. You might have noticed that all three of my methods have a parameter called self. This is necessary because when you call a method on an object, Python will automatically pass a reference to that object as the first argument. It may seem odd and maybe a little recursive that Python is passing an object to a method that's acting on that object, but it does so for a very important reason. By always passing in the object being acted upon as the first argument to the method, Python provides a convenient way to access and modify that object from within the method. You can actually name this parameter whatever you want but the convention is to name itself which is a rule I highly recommend following. So when I access the jeans class to construct the new jeans object, I'll pass it arguments for the waist, length, and color which gets sent to the _init_ method. Inside the _init_ method, I use that self-reference to the new jeans object to create object attributes for waist, length, and color and then set those attributes to the appropriate values. It also creates a fourth attribute called wearing which represents whether or not that pair of jeans is being worn.
+
+The attributes and methods that define an object are a kind of blueprint called a class .
+
+class Chess(Game): 
+creates a class called Chess that inherit the methods from the Game class
+
+ Modules and packages are both collections of Python functions and classes that you can import and use in programs. So the two terms often get thrown around interchangeably but there is a difference. A module refers to a single Python script which contains a handful of functions and classes related to the same task. A package is a collection of several modules which are also related to the same type of task.
+
+ The thing that makes a Python package different from a regular module is that it has an additional special path attribute which points to the folder for the package which contains its modules. For example, I can see the path for the urllib package by accessing that attribute which is the word path with two underscores on each side. This reveals the path for the urllib package so I'll look at that directory in Windows Explorer. In it, you can see that it contains the various modules that make up the urllib package. Remember, modules are just individual Python scripts. Up one level, in the Python 35 lib folder, I see all of the standard Python modules and packages. These folders near the top are the packages, while the modules are contained in their individual scripts down below.
+
+When you import a Python module you are importing a collection of classes and/or functions .
+
+Queues and stacks are two data structures which enable you to store and retrieve objects based on the order that they're put into the queue or stack. Queues operate on a principle called first in, first out, or FIFO. The first item to be stored in a queue will be the first item that's removed. That means when you retrieve an item from a queue, you'll always get the item that's been in queue the longest. A stack operates on a related principle called LIFO, which stands for last in, first out. That means the item which was most recently placed onto the stack will be the next one that's removed.
+
+dictionary zamiast dlugiego if elif
+Besides being easier to read, the dictionary uses hashing to jump straight to the correct entry which can be quicker than the long if/elif chain. As the number of potential cases increases, this becomes more and more beneficial. If your program needs to make a decision based on the value of a single variable or expression, then you should consider using a dictionary or case statements.
+
+The moral of the story is to avoid changing the contents of a list inside of a for loop that's iterating through that list. Create a second copy for the loop to use and you can do whatever you want to the original list.
+
+A For loop runs a set number of times, whereas a While loop runs a variable number of times.
+"""
+TEST DRIVEN DEVELOPMENT (TDD)
+Why should we define happy path (positive case) and sad path (negative case) unit tests separately?
+To organize test suite into small segments that are easy to manage and underscore how the system behaves. Separating sad and happy path tests also helps other developers quickly understand your system.
+"""
+- Find open source Python projects that use pytest and read their tests. Then
+go to the source code to validate your assumptions. Try doing this repeatedly
+over a few projects that use the pytest framework. Here are a few to get you
+started: 
+    - Pytest retains a [list of projects](https://docs.pytest.org/en/latest/projects.html).
+    - [sentry, cross-platform application monitoring, with a focus on error reporting](
+https://github.com/getsentry/sentry/blob/master/tests/sentry/eventstream/kafka/test_consumer.py)
+    - [pdb++, a drop-in replacement for pdb](https://github.com/pdbpp/pdbpp/blob/master/testing/test_pdb.py)
+    - [Astropy,a single core package for Astronomy in Python](https://github.com/astropy/astropy/tree/master/astropy/tests/tests)
+
+
+- Add validation to the delete function in the fitness log class. First,
+refactor your test to account for this.
+
+- Additionally, you may consider contributing to open source projects that use
+pytest. If you are new to open source, there are several resources to get
+started.
+
+- The awesome for beginners github repository and the first timers only website
+contain ideas for beginner-friendly open source contributions.
+   - Awesome First PR Opportunities: https://github.com/MunGell/awesome-for-beginners
+   - Find open source projects with issues for beginners: https://www.firsttimersonly.com/
+
+- Also, the mediawiki parser library lists issues perfect for someone looking
+to get started with open source contributions to their project.
+"""
+interview:
+Collections, Time complexity, Recursion, Object-oriented progremming, linear data structures, nonlinear data structures, common sorting algorithms,
+common searching algorithms, problem-solving framework for coding challenges
+
+The first is a free interactive book you can read online called Problem Solving with Algorithms and Data Structures Using Python. 
+
